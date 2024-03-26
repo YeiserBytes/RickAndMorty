@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Card from './components/Card'
 
-export default function App() {
+export default function App () {
   const [characters, setCharacters] = useState([])
   const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(false)
@@ -30,7 +30,7 @@ export default function App() {
               gender={gender}
               image={image}
             />
-          ),
+          )
         )}
         {loading && <p>Loading...</p>}
         <div id="observer" style={{ height: '1px', width: '1px' }} />
