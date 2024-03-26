@@ -8,7 +8,7 @@ interface CardProps {
   created?: string
 }
 
-export default function Card(characters: CardProps) {
+export default function Card (characters: CardProps) {
   const { image, created, status, species, name, gender } = characters
 
   return (
@@ -20,8 +20,8 @@ export default function Card(characters: CardProps) {
             {status === 'Alive'
               ? `👍 ${status}`
               : status === 'Dead'
-              ? `☠️ ${status}`
-              : `🤷‍♂️ ${status}`}
+                ? `☠️ ${status}`
+                : `🤷‍♂️ ${status}`}
           </span>
           <time className="text-blue-500" dateTime={created}>
             {new Date(created ?? '').toLocaleDateString()}
@@ -33,19 +33,19 @@ export default function Card(characters: CardProps) {
             {species === 'Human'
               ? `👤 ${species}`
               : species === 'Alien'
-              ? `👽 ${species}`
-              : species === 'Poopybutthole'
-              ? `💩 ${species}`
-              : species}
+                ? `👽 ${species}`
+                : species === 'Poopybutthole'
+                  ? `💩 ${species}`
+                  : species}
           </span>
           <span className="inline-flex items-center gap-1 px-2 py-1 text-xs font-semibold text-indigo-600 rounded-full bg-indigo-50">
             {gender === 'Male'
               ? `♂️ ${gender}`
               : gender === 'Female'
-              ? `♀️ ${gender}`
-              : gender === 'Unknown'
-              ? `🤷‍♂️ ${gender}`
-              : gender}
+                ? `♀️ ${gender}`
+                : gender === 'Unknown'
+                  ? `🤷‍♂️ ${gender}`
+                  : gender}
           </span>
         </section>
       </article>
